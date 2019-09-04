@@ -1,4 +1,11 @@
 # EchoMist
 Test project for SonarCloud
 
-run the program on the command line by: python calculator.py
+Requirements:
+    pytest needs to be installed
+
+To manually run test cases for calculator.py, on the command line:
+
+    $ pytest test_calculator.py
+
+
