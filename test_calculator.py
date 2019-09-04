@@ -7,6 +7,10 @@ class TestCalculator:
         calc = Calculator()
         assert calc.add(2, 3) == 5
 
+    def test_bad_add(self):
+        calc = Calculator()
+        assert calc.add(2, 'dog') == 5
+
     def test_subtract(self):
         calc = Calculator()
         assert calc.subtract(2, 3) == -1
