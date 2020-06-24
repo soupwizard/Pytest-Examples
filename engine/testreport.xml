@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="marvin" name="pytest" skipped="0" tests="5" time="0.034" timestamp="2020-06-24T00:45:40.690180"><testcase classname="test_babb_engine_class_example.TestEngineClass" file="test_babb_engine_class_example.py" line="9" name="test_turn_on" time="0.001"></testcase><testcase classname="test_babb_engine_class_example.TestEngineClass" file="test_babb_engine_class_example.py" line="13" name="test_turn_off" time="0.000"></testcase><testcase classname="test_babb_engine_class_example.TestEngineClass" file="test_babb_engine_class_example.py" line="17" name="test_rpm_positive" time="0.000"></testcase><testcase classname="test_babb_engine_class_example.TestEngineClass" file="test_babb_engine_class_example.py" line="22" name="test_rpm_over_max" time="0.000"><system-out>ERROR, setting rpm of 3100.00 exceeded max rpm of 3000.00
+</system-out></testcase><testcase classname="test_babb_engine_class_example.TestEngineClass" file="test_babb_engine_class_example.py" line="29" name="test_cant_start_blown_engine" time="0.001"><failure message="AssertionError: Engine state should be BLOWN
+assert &apos;ON&apos; == &apos;BLOWN&apos;
+  - ON
+  + BLOWN">self = &lt;test_babb_engine_class_example.TestEngineClass object at 0x7fc763e89130&gt;
+
+    def test_cant_start_blown_engine(self):
+        self.engine.set_state(&apos;ON&apos;)
+        over_max = self.engine.get_max_rpm() + 100.0
+        self.engine.set_rpm(over_max)
+        assert self.engine.get_state() == &apos;BLOWN&apos;, &quot;Engine state is not BLOWN&quot;
+        assert self.engine.get_rpm() == 0, &quot;Engine rpm not 0&quot;
+        self.engine.turn_on()
+&gt;       assert self.engine.get_state() == &apos;BLOWN&apos;, &quot;Engine state should be BLOWN&quot;
+E       AssertionError: Engine state should be BLOWN
+E       assert &apos;ON&apos; == &apos;BLOWN&apos;
+E         - ON
+E         + BLOWN
+
+test_babb_engine_class_example.py:37: AssertionError</failure><system-out>ERROR, setting rpm of 3100.00 exceeded max rpm of 3000.00
+</system-out></testcase></testsuite></testsuites>
