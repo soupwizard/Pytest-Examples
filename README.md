@@ -8,4 +8,4 @@ Requirements:
 
 To manually run test cases for calculator.py, on the command line:
 
-    $ pytest --cov=calculator test_calculator.py
+    $ pytest --cov=calculator calculator/test_calculator.py
