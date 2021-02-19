@@ -2,8 +2,8 @@
 Examples of python testing 
 
 Requirements:
-    python3
-    pytest and py-cov needs to be installed
+* python3  
+* pytest and py-cov needs to be installed
     
     pip3 install pytest pytest-cov
 
