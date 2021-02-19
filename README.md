@@ -8,6 +8,5 @@ Requirements:
     pip3 install pytest pytest-cov
 
 To manually run test cases for calculator.py, on the command line:
-    $ pytest test_calculator.py
 
-
+    $ pytest --cov=calculator test_calculator.py
